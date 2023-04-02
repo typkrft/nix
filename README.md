@@ -27,8 +27,10 @@ exit  # Start a new shell to reload the environment.
 - [Stylix](https://danth.github.io/stylix/options/hm.html)
 - [Nix Darwin Modules](https://daiderd.com/nix-darwin/manual/index.html)
 - [Home Manager Manual](https://nix-community.github.io/home-manager/index.html)
+- [Helix Manual](https://docs.helix-editor.com/keymap.html#goto-mode)
 ## Repos
-- [nix-darwin](https://github.com/LnL7/nix-darwin)
+- [LnL7/nix-darwin](https://github.com/LnL7/nix-darwin)
+- **[zmre/mac-nix-simple-example](https://github.com/zmre/mac-nix-simple-example)**
 ## Blogs
 - [Dotfiles with nix and home manager](https://www.bekk.christmas/post/2021/16/dotfiles-with-nix-and-home-manager)
 - [Intro to Flakes by Nix Creator](https://www.tweag.io/blog/2020-05-25-flakes/)
@@ -40,12 +42,20 @@ exit  # Start a new shell to reload the environment.
 - [Wil T - Intro to Flakes](https://www.youtube.com/watch?v=K54KKAx2wNc&list=PL-saUBvIJzOkjAw_vOac75v-x6EzNzZq-&index=8)
 - [Almost Perfect Dotfiles Management w/ nix, home-manager and flakes](https://www.youtube.com/watch?v=CDzgNxoAlnA)
 - **[Walkthrough of Nix Install and Setup on MacOS](https://www.youtube.com/watch?v=LE5JR4JcvMg&feature=youtu.be)**
+- [Setting up Nix on macOS from scratch (incl. dotfiles via home-manager and Nix flakes)](https://www.youtube.com/watch?v=1dzgVkgQ5mE)
+- [Nix From Nothing #2 | Let's Learn #Nix & #NixOS!](https://www.youtube.com/watch?v=POUeOSjeJ1w)
+- [Informal intro to the Nix language, derivations and nixpkgs](https://www.youtube.com/watch?v=9DJtHIpdp0Y)
+- [Beginners Guide to Nix EP1: Flakes](https://www.youtube.com/watch?v=IrxCiNnXG4M)
+- [Setting up nix-darwin home-manager and flakes on M1 Macbook Pro OSX Monterey 12.0.1](https://www.youtube.com/watch?v=KJgN0lnA5mk)
 ## Others
 - [List of Resources](https://www.reddit.com/r/NixOS/comments/v2xpjm/big_list_of_flakes_tutorials/)
 - [Brew Packages](https://formulae.brew.sh/formula/)
 - [SKHD Keywords](https://github.com/koekeishiya/skhd/issues/1)
 - [Technical Note Remapping Keys](https://developer.apple.com/library/archive/technotes/tn2450/_index.html) Used in `keyboard.nix`
     - [Hex to Int](https://www.calculatormix.com/conversions/number/hex-to-int/) Used in `keyboard.nix`
+    - [hidutil generator](https://hidutil-generator.netlify.app/) Used in `keyboard.nix`
+- [i3wm for ideas](https://i3wm.org/docs/userguide.html#_default_keybindings)
+- [Nix User Repository NUR](https://nur.nix-community.org/repos/alwinb/)
 
 # TODO
 ## Alfred

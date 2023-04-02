@@ -48,6 +48,9 @@ exit  # Start a new shell to reload the environment.
     - [Hex to Int](https://www.calculatormix.com/conversions/number/hex-to-int/) Used in `keyboard.nix`
 
 # TODO
+## Alfred
+- [ ] Theme
+- [ ] See if possible to configure and auto add workflows
 ## ZSH
 - [ ] Keymaps 
 ## Yabai

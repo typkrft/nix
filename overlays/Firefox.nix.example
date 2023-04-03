@@ -1,3 +1,15 @@
+# Example Usage in Nix Darwin
+pkgs = import nixpkgs {
+  config.allowUnfree = true;
+  system = "aarch64-darwin";
+  # overlays = [
+  #   (self: super: {
+  #     Firefox = import ./overlays/Firefox.nix;
+  #   })
+  # ];
+};
+
+# Overlay
 { stdenv, fetchurl, undmg }: stdenv.mkDerivation rec {
     pname = "Firefox";
     version = "112.0b9";

@@ -1,12 +1,40 @@
 { pkgs, themes, ... }: {
   programs.firefox.enable = true;
+  # NOTE: Use a dummy package, Firefox is managed by homebrew
   programs.firefox.package = pkgs.runCommand "firefox-0.0.0" { } "mkdir $out";
   programs.firefox.profiles."ff-nix" = {
     name = "ff-nix";
     isDefault = true;
     id = 0;
-    # path = "~/.config/firefox";
-    # userChrome = builtins.readFile ~/Code/Nix/test.css;
+    # TODO
+    # settings = {
+    #   "app.update.auto" = false;
+    #   "browser.startup.homepage" = "https://lobste.rs";
+    #   "browser.search.region" = "GB";
+    #   "browser.search.countryCode" = "GB";
+    #   "browser.search.isUS" = false;
+    #   "browser.ctrlTab.recentlyUsedOrder" = false;
+    #   "browser.newtabpage.enabled" = false;
+    #   "browser.bookmarks.showMobileBookmarks" = true;
+    #   "browser.uidensity" = 1;
+    #   "browser.urlbar.placeholderName" = "DuckDuckGo";
+    #   "browser.urlbar.update1" = true;
+    #   "distribution.searchplugins.defaultLocale" = "en-GB";
+    #   "general.useragent.locale" = "en-GB";
+    #   "identity.fxaccounts.account.device.name" = config.networking.hostName;
+    #   "privacy.trackingprotection.enabled" = true;
+    #   "privacy.trackingprotection.socialtracking.enabled" = true;
+    #   "privacy.trackingprotection.socialtracking.annotate.enabled" = true;
+    #   "reader.color_scheme" = "auto";
+    #   "services.sync.declinedEngines" = "addons,passwords,prefs";
+    #   "services.sync.engine.addons" = false;
+    #   "services.sync.engineStatusChanged.addons" = true;
+    #   "services.sync.engine.passwords" = false;
+    #   "services.sync.engine.prefs" = false;
+    #   "services.sync.engineStatusChanged.prefs" = true;
+    #   "signon.rememberSignons" = false;
+    #   "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+    # };
     userChrome = ''
       /*==============================================================================================*
 
@@ -15,19 +43,15 @@
       | █▄▄ | █▀█ | ▄▄█ | █▄▄ | █▀█ | █▄▀ | ██▄ |
       +-----+-----+-----+-----+-----+-----+-----+
 
-
       Description:    Minimalist, Simple, Keyboard Centered and based on SimpleFox. 🦊
                       What you get is a really simple responsive one-line layout using the new Proton UI.
 
                       > SimpleFox: https://github.com/migueravila/SimpleFox
 
-
       Author:         Andreas Grafen
                       (https://andreas.grafen.info)
 
-
       Repository:     https://github.com/andreasgrafen/ag.proton
-
 
                       Thank you Nick, Abdallah and Benyamin for all the great suggestions for improvements! ♡
                       Nick:     https://github.com/nicksundermeyer)
@@ -38,10 +62,6 @@
                       https://github.com/crambaud/waterfall
 
       *==============================================================================================*/
-
-
-
-
 
       /*---+---+---+---+---+---+
       | C | O | N | F | I | G |
@@ -61,28 +81,26 @@
 
           @media (prefers-color-scheme: dark) { :root {
 
-              /* --window-colour:                     #1E2021; */
-              /* --secondary-colour:                  #191B1C; */
-              /* --inverted-colour:                   #FAFAFC; */
-
-              /* Containter Tab Colours */
-              /* --uc-identity-color-blue:            #7ED6DF; */
-              /* --uc-identity-color-turquoise:       #55E6C1; */
-              /* --uc-identity-color-green:           #B8E994; */
-              /* --uc-identity-color-yellow:          #F7D794; */
-              /* --uc-identity-color-orange:          #F19066; */
-              /* --uc-identity-color-red:             #FC5C65; */
-              /* --uc-identity-color-pink:            #F78FB3; */
-              /* --uc-identity-color-purple:          #786FA6; */
-
-              /* --uc-identity-color-blue-muted:      #7ED6DF99; */
-              /* --uc-identity-color-turquoise-muted: #55E6C199; */
-              /* --uc-identity-color-green-muted:     #B8E99499; */
-              /* --uc-identity-color-yellow-muted:    #F7D794CC; */
-              /* --uc-identity-color-orange-muted:    #F19066FF; */
-              /* --uc-identity-color-red-muted:       #FC5C65FF; */
-              /* --uc-identity-color-pink-muted:      #F78FB399; */
-              /* --uc-identity-color-purple-muted:    #786FA6FF; */
+              --window-colour:                     #282A36; 
+              --secondary-colour:                  #BD93F9; 
+              --inverted-colour:                   #F8F8F2
+              /* Containter Tab Colours */ 
+              --uc-identity-color-blue:            #8BE9FD; 
+              --uc-identity-color-turquoise:       #D6ACFF; 
+              --uc-identity-color-green:           #50FA7B; 
+              --uc-identity-color-yellow:          #F1FA8C; 
+              --uc-identity-color-orange:          #FFB86C; 
+              --uc-identity-color-red:             #FF5555; 
+              --uc-identity-color-pink:            #FF79C6; 
+              --uc-identity-color-purple:          #BD93F9;
+              --uc-identity-color-blue-muted:      #7E8BE9FD; 
+              --uc-identity-color-turquoise-muted: #55D6ACFF; 
+              --uc-identity-color-green-muted:     #B850FA7B; 
+              --uc-identity-color-yellow-muted:    #F7F1FA8C; 
+              --uc-identity-color-orange-muted:    #F1FFB86C; 
+              --uc-identity-color-red-muted:       #FCFF5555; 
+              --uc-identity-color-pink-muted:      #F7FF79C6; 
+              --uc-identity-color-purple-muted:    #78BD93F9; 
 
           }}
 
@@ -121,7 +139,6 @@
 
           /* URL colour in URL bar suggestions */
           --urlbar-popup-url-color: var(--uc-identity-color-purple) !important;
-
 
           /*---+---+---+---+---+---+---+
           | V | I | S | U | A | L | S |
@@ -192,12 +209,7 @@
 
           #urlbar-go-button { display: none !important; }
 
-
-
-
-
       /*=============================================================================================*/
-
 
       /*---+---+---+---+---+---+
       | L | A | Y | O | U | T |
@@ -228,10 +240,6 @@
 
       }
 
-
-
-
-
       window,
       #main-window,
       #toolbar-menubar,
@@ -249,10 +257,6 @@
 
       }
 
-
-
-
-
       /* grey out ccons inside the toolbar to make it
       * more aligned with the Black & White colour look */
       #PersonalToolbar toolbarbutton:not(:hover),
@@ -265,9 +269,6 @@
 
       /* remove "padding" left and right from tabs */
       .titlebar-spacer { display: none !important; }
-
-
-
 
 
       /* remove gap after pinned tabs */
@@ -417,9 +418,6 @@
       #TabsToolbar .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover { color: var(--uc-theme-colour) !important; }
 
 
-
-
-
       #nav-bar {
 
           border:     none !important;
@@ -461,9 +459,6 @@
           > .urlbarView-row-inner { background: var(--uc-hover-colour) !important; }
 
 
-
-
-
       /* transition to oneline */
       @media (min-width: 1000px) {
 
@@ -477,9 +472,6 @@
 
 
       } /* end media query */
-
-
-
 
 
       /* Container Tabs */

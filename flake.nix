@@ -69,7 +69,7 @@
               ./modules/dots/kitty.nix
               ./modules/dots/zsh.nix
               ./modules/dots/xresources.nix
-              ./modules/dots/ff-userchrome.nix
+              ./modules/dots/firefox.nix
             ];
             extraSpecialArgs = { inherit themes; };
           };

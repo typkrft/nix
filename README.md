@@ -17,6 +17,13 @@ sudo /nix/var/nix/profiles/system/activate
 exit  # Start a new shell to reload the environment.
 ```
 
+# Tips
+## Dummy Packages
+**NOTE:** Manage a package with homebrew but still use nixDarwin home-manager modules for it
+`programs.firefox.package = pkgs.runCommand "firefox-0.0.0" { } "mkdir $out";`
+## Read a file into a string
+`userChrome = builtins.readFile ~/Code/Nix/test.css;`
+
 # Helpful Links
 ## Docs
 - [Install Nix](https://nixos.org/manual/nix/stable/installation/installing-binary.html)

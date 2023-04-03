@@ -31,6 +31,7 @@
     extraConfig = ''
       yabai -m rule --add app="^Authy Desktop$|^Bitwarden$|^System Settings$" sticky=on layer=above
       yabai -m rule --add app="^Screens$" title!="Screens Library"  manage=off layer=above
+      yabai -m rule --add app="^Finder$" title="Copy"  manage=off layer=above
 
 
       yabai -m signal --add event=window_created action="sketchybar -m --trigger yabai_window &> /dev/null"

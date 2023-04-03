@@ -23,6 +23,8 @@
         
     rctrl - f : yabai -m window --toggle float --grid 4:4:1:1:2:2
     rctrl - z : yabai -m window --toggle zoom-fullscreen
+    rctrl - t : yabai -m window --toggle topmost
+    rctrl - i : yabai -m window --toggle sticky
 
     rctrl - 1 : yabai -m space --focus 1 
     rctrl - 2 : yabai -m space --focus 2 

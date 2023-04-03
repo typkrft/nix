@@ -33,6 +33,11 @@
       pkgs = import nixpkgs {
         config.allowUnfree = true;
         system = "aarch64-darwin";
+        # overlays = [
+        #   (self: super: {
+        #     Firefox = import ./overlays/Firefox.nix;
+        #   })
+        # ];
       };
       
       inputs = { inherit themes; };
@@ -64,8 +69,9 @@
               ./modules/dots/kitty.nix
               ./modules/dots/zsh.nix
               ./modules/dots/xresources.nix
+              ./modules/dots/ff-userchrome.nix
             ];
-            extraSpecialArgs = { inherit darwin themes; };
+            extraSpecialArgs = { inherit themes; };
           };
         }
       ];

@@ -1,39 +1,41 @@
 { pkgs, themes, ... }: {
-  programs.firefox.profiles."nix" = {
-    enable = true;
+  programs.firefox.enable = true;
+  programs.firefox.package = pkgs.runCommand "firefox-0.0.0" { } "mkdir $out";
+  programs.firefox.profiles."ff-nix" = {
     name = "ff-nix";
     isDefault = true;
-    id = 1;
-    path = "~/.config/firefox";
+    id = 0;
+    # path = "~/.config/firefox";
+    # userChrome = builtins.readFile ~/Code/Nix/test.css;
     userChrome = ''
       /*==============================================================================================*
 
-        +-----+-----+-----+-----+-----+-----+-----+
-        | █▀▀ | ▄▀█ | █▀▀ | █▀▀ | ▄▀█ | █▀▄ | █▀▀ |
-        | █▄▄ | █▀█ | ▄▄█ | █▄▄ | █▀█ | █▄▀ | ██▄ |
-        +-----+-----+-----+-----+-----+-----+-----+
+      +-----+-----+-----+-----+-----+-----+-----+
+      | █▀▀ | ▄▀█ | █▀▀ | █▀▀ | ▄▀█ | █▀▄ | █▀▀ |
+      | █▄▄ | █▀█ | ▄▄█ | █▄▄ | █▀█ | █▄▀ | ██▄ |
+      +-----+-----+-----+-----+-----+-----+-----+
 
 
-        Description:    Minimalist, Simple, Keyboard Centered and based on SimpleFox. 🦊
-                        What you get is a really simple responsive one-line layout using the new Proton UI.
+      Description:    Minimalist, Simple, Keyboard Centered and based on SimpleFox. 🦊
+                      What you get is a really simple responsive one-line layout using the new Proton UI.
 
-                        > SimpleFox: https://github.com/migueravila/SimpleFox
-
-
-        Author:         Andreas Grafen
-                        (https://andreas.grafen.info)
+                      > SimpleFox: https://github.com/migueravila/SimpleFox
 
 
-        Repository:     https://github.com/andreasgrafen/ag.proton
+      Author:         Andreas Grafen
+                      (https://andreas.grafen.info)
 
 
-                        Thank you Nick, Abdallah and Benyamin for all the great suggestions for improvements! ♡
-                        Nick:     https://github.com/nicksundermeyer)
-                        Abdallah: https://github.com/HeiWiper)
-                        Benyamin: https://github.com/benyaminl)
+      Repository:     https://github.com/andreasgrafen/ag.proton
 
-                        If you're looking for a **mouse-friendly** clone please check out Waterfall.
-                        https://github.com/crambaud/waterfall
+
+                      Thank you Nick, Abdallah and Benyamin for all the great suggestions for improvements! ♡
+                      Nick:     https://github.com/nicksundermeyer)
+                      Abdallah: https://github.com/HeiWiper)
+                      Benyamin: https://github.com/benyaminl)
+
+                      If you're looking for a **mouse-friendly** clone please check out Waterfall.
+                      https://github.com/crambaud/waterfall
 
       *==============================================================================================*/
 
@@ -489,8 +491,6 @@
       .identity-color-red       { --identity-tab-color: var(--uc-identity-color-red)       !important; --identity-icon-color: var(--uc-identity-color-red)       !important; --uc-identity-gradient-color: var(--uc-identity-color-red-muted) !important;  }
       .identity-color-pink      { --identity-tab-color: var(--uc-identity-color-pink)      !important; --identity-icon-color: var(--uc-identity-color-pink)      !important; --uc-identity-gradient-color: var(--uc-identity-color-pink-muted) !important;  }
       .identity-color-purple    { --identity-tab-color: var(--uc-identity-color-purple)    !important; --identity-icon-color: var(--uc-identity-color-purple)    !important; --uc-identity-gradient-color: var(--uc-identity-color-purple-muted) !important;  }
-
-
     '';
   };
 }

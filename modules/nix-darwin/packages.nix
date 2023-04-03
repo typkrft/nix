@@ -50,6 +50,7 @@
       "espanso"
       "discord"
       "libreoffice"
+      "caffeine"
     ];
     brews = [
       "php" # For 2fm alfred plugin 

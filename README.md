@@ -69,6 +69,8 @@ exit  # Start a new shell to reload the environment.
 - [ ] Finish Config [Examples](https://github.com/FelixKratz/SketchyBar/discussions/47)
 ## SKHD
 - [ ] Keymaps [Ideas](https://github.com/shaunsingh/nix-darwin-dotfiles/blob/962bb43a30df858bafa1d14e47becdec6c31b779/users/shared/darwin/skhd.nix)
+- [x] Add Topmost Toggle
+- [x] Add Sticky Toggle
 ## Helix
 - [ ] Keymaps Config 
 ## Kitty
@@ -84,9 +86,14 @@ exit  # Start a new shell to reload the environment.
 ## FZF
 - [ ] Setup File Previews Shown [Here](https://github.com/Freed-Wu/fzf-tab-source/tree/main/sources)
 ## Firefox
-- [ ] Create userChrome.css [Nix Examples](https://github.com/cmacrae/config/blob/b33ccb041861b56c97e1744b0fd8c606e343164c/modules/home.nix) [FF Module](https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix)
+- [ ] Template userChrome to theme
+- [ ] Additional Configuration
+- [ ] Delete Old Profiles
+- [x] Create userChrome.css ~~[Nix Examples](https://github.com/cmacrae/config/blob/b33ccb041861b56c97e1744b0fd8c606e343164c/modules/home.nix)~~ [FF Module](https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix) [Create Dummy Package](https://github.com/cmacrae/config/blob/53f2498a74b0ad258bc0af80800a67d37d0fffdc/modules/macintosh.nix)
 ## Espanso
 - [ ] Create Config [Example](https://espanso.org/docs/matches/forms/)
+## Pueue
+- [ ] Configure and run at a start
 ## Other
 - [ ] Install certificates needed for work
 - [ ] Ensure Garbage Collection Works
